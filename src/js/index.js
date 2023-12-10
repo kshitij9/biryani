@@ -9,8 +9,8 @@ import { animate } from "./animation.js";
 
 if (process.env.OPEN_DATE) {
   const status = isBDay();
-  if (status === "IS_EARLY") setPage(soon);
-  if (status === "IS_LATE") setPage(late);
+  if (status === "IS_EARLY") animate();
+  if (status === "IS_LATE") animate();
   if (status === "ON_TIME") animate();
 } else {
   animate();
